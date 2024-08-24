@@ -1,0 +1,26 @@
+{# templates/partials/_header.html.twig #}
+
+    <nav class="navbar">
+        <div class="navbar-left">
+            <a href="{{ path('landing_page') }}" class="navbar-logo">
+                {# <img src="{{ asset('path/to/your/logo.png') }}" alt="Logo"> #}
+                <span>My Hotel</span>
+            </a>
+        </div>
+        <div class="navbar-center">
+            <ul class="navbar-menu">
+                <li><a href="{{ path('landing_page') }}">Home</a></li>
+                <li><a href="{{ path('landing_page') }}">Dashboard</a></li>
+                <li><a href="{{ path('landing_page') }}">About</a></li>
+            </ul>
+        </div>
+        <div class="navbar-right">
+            {% if app.user %}
+                <a href="{{ path('landing_page') }}" class="btn">My Profile</a>
+                <a href="{{ path('app_logout') }}" class="btn">Sign Out</a>
+            {% else %}
+                <a href="{{ path('app_login') }}" class="btn">Sign In</a>
+                <a href="{{ path('app_register') }}" class="btn">Sign Up</a>
+            {% endif %}
+        </div>
+    </nav>
