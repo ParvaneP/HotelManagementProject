@@ -1,0 +1,31 @@
+{# templates/landing/index.html.twig #}
+
+{% extends 'base.html.twig' %}
+
+{% block title %}Welcome to Our Hotel{% endblock %}
+
+{% block body %}
+    <div class="container mt-4">
+        <h1 class="text-center mb-4">Welcome to Our Hotel</h1>
+        <h1 class="text-left mb-4">Available Rooms</h1>
+        <div class="row">
+            {% for room in rooms %}
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="{{ room.imagePath }}" class="card-img-top" alt="{{ room.name }}">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ room.name }}</h5>
+                            <p class="card-text">{{ room.description }}</p>
+                            <p class="card-text"><strong>Price:</strong> ${{ room.price }}</p>
+                            <a href="{{ path('app_room_show', {'id': room.id}) }}" class="btn btn-primary">Reserve</a>
+                        </div>
+                    </div>
+                </div>
+            {% else %}
+                <div class="col-12">
+                    <p class="text-center">No rooms available at the moment.</p>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}

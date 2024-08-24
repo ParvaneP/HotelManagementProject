@@ -1,3 +1,22 @@
 body {
     background-color: skyblue;
 }
+
+.navbar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 16px;
+}
+
+.navbar-menu {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar-menu > li:not(:last-child) {
+    margin-right: 16px;
+}
