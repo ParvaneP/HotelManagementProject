@@ -1,0 +1,22 @@
+{% if app.user %}
+    {% if 'ROLE_ADMIN' in app.user.roles %}
+        <nav id="sidebar-wrapper">
+            <div class="sidebar-heading py-4 text-center">Admin Panel</div>
+            <div class="list-group list-group-flush">
+                <a href="{{ path('app_room_index') }}" class="text-left list-group-item list-group-item-action">Rooms</a>
+                <a href="{{ path('app_guest_index') }}" class="text-left list-group-item list-group-item-action">Guests</a>
+                <a href="{{ path('app_reservation_index') }}" class="text-left list-group-item list-group-item-action">Reservations</a>
+                <a href="{{ path('app_booking_index') }}" class="text-left list-group-item list-group-item-action">Bookings</a>
+            </div>
+        </nav>
+    {% elseif 'ROLE_GUEST' in app.user.roles %}
+        <nav id="sidebar-wrapper">
+            <div class="sidebar-heading py-4 text-center">Guest Panel</div>
+            <div class="list-group list-group-flush">
+                <a href="{{ path('app_guest_reservation_index') }}" class="text-left list-group-item list-group-item-action">My Reservations</a>
+                {# <a href="{{ path('guest_bookings') }}" class="text-left list-group-item list-group-item-action">My Bookings</a> #}
+            </div>
+        </nav>
+    {% endif %}
+{% endif %}
+

@@ -22,8 +22,14 @@
     </head>
     <body>
         {% include 'base/_header.html.twig' %}
-        <div class="content">
-            {% block body %}{% endblock %}
+        <div class="wrapper">
+            <!-- Vertical Navbar -->
+            {% include 'base/_navbar.html.twig' %}
+
+            <!-- Main Content -->
+            <div id="page-content-wrapper">
+                {% block body %}{% endblock %}
+            </div>
         </div>
     </body>
 </html>

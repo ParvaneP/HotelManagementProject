@@ -16,28 +16,30 @@ class ReservationRepository extends ServiceEntityRepository
         parent::__construct($registry, Reservation::class);
     }
 
-//    /**
-//     * @return Reservation[] Returns an array of Reservation objects
-//     */
-//    public function findByExampleField($value): array
-//    {
-//        return $this->createQueryBuilder('r')
-//            ->andWhere('r.exampleField = :val')
-//            ->setParameter('val', $value)
-//            ->orderBy('r.id', 'ASC')
-//            ->setMaxResults(10)
-//            ->getQuery()
-//            ->getResult()
-//        ;
-//    }
+    /**
+    * @param string $value
+    * @return Reservation[] Returns an array of Reservation objects
+    */
+   public function findReservationsUserId($value): array
+   {
+        return $this->createQueryBuilder('r')
+        ->andWhere('r.user = :userId')
+        ->setParameter('userId', $value)
+        ->getQuery()
+        ->getResult();
+   }
 
-//    public function findOneBySomeField($value): ?Reservation
-//    {
-//        return $this->createQueryBuilder('r')
-//            ->andWhere('r.exampleField = :val')
-//            ->setParameter('val', $value)
-//            ->getQuery()
-//            ->getOneOrNullResult()
-//        ;
-//    }
+   /**
+    * @param string $value
+    * @return Reservation[] Returns an array of Reservation objects
+    */
+   public function findReservationsByStatus($value): array
+   {
+       return $this->createQueryBuilder('r')
+           ->andWhere('r.status = :val')
+           ->setParameter('val', $value)
+           ->orderBy('r.id', 'ASC')
+           ->getQuery()
+           ->getResult();
+   }
 }
