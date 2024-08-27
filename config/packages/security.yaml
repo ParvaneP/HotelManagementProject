@@ -32,10 +32,11 @@ security:
                 login_path: app_login
                 check_path: app_login
                 enable_csrf: true
+                success_handler: App\Security\Authentication\AuthenticationSuccessHandler
             logout:
                 path: app_logout
                 # where to redirect after logout
-                target: landing_page
+                target: app_landing_page
 
             # activate different ways to authenticate
             # https://symfony.com/doc/current/security.html#the-firewall
@@ -53,6 +54,7 @@ security:
 
         # Controllers accessible only by Admins
         - { path: ^/admin, roles: ROLE_ADMIN }
+        - { path: ^/guests, roles: ROLE_ADMIN }
 
         # Controllers accessible by both Admins and Guests
         - { path: ^/guest, roles: ROLE_GUEST }

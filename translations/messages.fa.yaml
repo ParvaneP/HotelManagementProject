@@ -1,0 +1,59 @@
+common.name: نام
+common.description: توضیحات
+common.price: قیمت
+common.imagePath: مسیر تصویر
+common.actions: عملکردها
+common.show: نمایش دادن
+common.edit: ویرایش کردن
+common.no_records_found: هیچ اطلاعات ثبت شده ای بافت نشد
+common.create_new: جدید بساز
+common.edit_room: ویرایش کردن اناق
+common.back_to_list: به لیست برگرد
+common.new_room: اتاق جدید
+common.create_new_room: اتاق جدید بساز
+common.room: اتاق
+common.reservations: رزرو
+common.user: کاربر
+common.check_in_date: تاریخ ورود را چک کن
+common.check_out_date: تاریخ خروج را چک کن
+common.status: حالت
+common.delete: حذف کردن
+common.edit_reservation: ویرایش کردن رزرو
+reservation.new.new_reservation: رزرو جدید
+reservation.new.create_new_reservation: رزرو جدید بساز
+security.login.login: ورود به سیستم
+security.login.logout: خروج از سیستم
+common.welcome: خوش آمدید
+landing.index.welcome_massage: به هتل ما خوش آمدید
+landing.index.available_rooms: اتاقهای در دسترس
+landing.index.available_rooms_massage: فعلا اتاقی در دسترس نیست
+landing.index.reserve: رزرو
+common.guests: مهمانان
+common.id: شناسه
+common.username: نام کاربری
+common.roles: نقشها
+common.password: کلمه عبور
+common.email: ایمیل
+common.login_count: تعداد ورود به سیستم
+common.created_at: ناریخ ایجاد
+common.updated_at: تاریخ به روز رسانی
+common.first_name: اسم
+common.last_name: فامیل
+common.birth_date: تاریخ تولد
+common.delete_massage: از حذف این گزینه مطمئن هستید؟
+common.save: ذخیره کردن
+common.edit_user: ویرایش کاربر
+common.update: به روز رسانی
+common.guest: مهمان
+common.home: صفحه اصلی
+common.about: درباره ی
+common.my_profile: پروفایل من
+common.sign_out: خروج
+common.sign_in: ورود
+common.sign_up: ثبت نام
+common.admin_panel: پنل مدیریت
+common.rooms: اتاقها
+common.bookings: رزرو شده ها
+common.guest_panel: پنل مهمان
+commonm.my_reservations: رزروهای من
+common.my_bookings: رزرو شده های من
